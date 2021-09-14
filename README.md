@@ -4,7 +4,7 @@ Did you spend a full hour customizing your item, adding a perfect description, a
 
 Not anymore!
 
-### This modules adds a confirmation dialogue before deleting stuff
+### This module adds a confirmation dialogue before deleting stuff
 * When you click on `Delete Item` or `Delete Effect` from the character sheet, a confirmation dialogue will appear before deleting the item. 
 * For a quantity of more than one for an item, you can decide how many you want to delete. 
 * Can be enabled/disabled from the settings.
