@@ -11,7 +11,7 @@
         "main.js"
     ],
     "socket": true,
-    "url": "https://gitlab.com/tposney/item-delete-check/tree/master",
-    "manifest": "https://gitlab.com/tposney/item-delete-check/raw/master/module.json",
-    "download": "https://gitlab.com/tposney/item-delete-check/raw/master/item-delete-check.zip"
+    "url": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/tree/master",
+    "manifest": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/releases/latest/download/module.json",
+    "download": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/archive/refs/tags/v1.0.0.zip"
 }
