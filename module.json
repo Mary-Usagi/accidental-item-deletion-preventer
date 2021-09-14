@@ -1,0 +1,17 @@
+{
+    "name": "accidental-item-deletion-preventer",
+    "title": "Accidental Item Deletion Preventer",
+    "description": "Add a delete confirmation dialogue for items in inventories",
+    "author": "MaryUsagi",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.8.8",
+    "compatibleCoreVersion": "0.8.9",
+    "scripts": [],
+    "esmodules": [
+        "main.js"
+    ],
+    "socket": true,
+    "url": "https://gitlab.com/tposney/item-delete-check/tree/master",
+    "manifest": "https://gitlab.com/tposney/item-delete-check/raw/master/module.json",
+    "download": "https://gitlab.com/tposney/item-delete-check/raw/master/item-delete-check.zip"
+}
