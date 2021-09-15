@@ -29,10 +29,8 @@ jobs:
         working-directory: ./
         run: zip -r ./module.zip ./main.js ./styles/* ./module.json ./LICENSE ./README.md
 
-      - name: Get Version
-        shell: bash
-        id: get-version
-        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+      - id: get_version
+        uses: battila7/get-version-action@v2
 
       - name: Create Release
         id: create-release
