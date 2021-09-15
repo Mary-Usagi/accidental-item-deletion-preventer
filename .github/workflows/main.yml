@@ -39,7 +39,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          name: v${{ steps.get-version.outputs.version }}
+          omitName: true
           draft: false
           prerelease: false
           token: ${{secrets.GITHUB_TOKEN}}
