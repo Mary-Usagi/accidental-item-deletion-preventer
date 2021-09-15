@@ -14,7 +14,7 @@ Hooks.once('ready', function () {
     })
 
     Hooks.on("preDeleteItem", (item, render, ...args) => {
-        if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete")) {
+        if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete") && item.parent) {
             let actor = item.parent;
             let itemId = item.id;
 
@@ -72,7 +72,7 @@ Hooks.once('ready', function () {
     });
 
     Hooks.on("preDeleteActiveEffect", (effect, render, ...args) => {
-        if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete")) {
+        if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete") && effect.parent) {
             let actor = effect.parent;
             let effectId = effect.id;
             if (effect.toDelete) {
