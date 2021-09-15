@@ -8,7 +8,7 @@
     "compatibleCoreVersion": "0.8.9",
     "scripts": [],
     "esmodules": [
-        "main.js" 
+        "main.js"
     ],
     "socket": true,
     "url": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/tree/master",
