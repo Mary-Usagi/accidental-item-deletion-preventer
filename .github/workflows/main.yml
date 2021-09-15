@@ -40,6 +40,8 @@ jobs:
           omitName: true
           draft: false
           prerelease: false
+          commit: main
           token: ${{secrets.GITHUB_TOKEN}}
           artifacts: "./module.zip, ./module.json"
+          tag: v1.0.10
           replacesArtifacts: false
