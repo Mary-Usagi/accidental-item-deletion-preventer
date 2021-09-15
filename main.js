@@ -10,7 +10,7 @@ Hooks.once('ready', function () {
         scope: "client",
         default: true,
         type: Boolean,
-        config: true,
+        config: true, 
     })
 
     Hooks.on("preDeleteItem", (item, render, ...args) => {
