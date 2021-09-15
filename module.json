@@ -3,7 +3,7 @@
     "title": "Accidental Item Deletion Preventer",
     "description": "Adds a confirmation popup when trying to delete an item from the character sheet",
     "author": "MaryUsagi",
-    "version": "1.0.4",
+    "version": "WILL BE AUTO REPLACED",
     "minimumCoreVersion": "0.8.8",
     "compatibleCoreVersion": "0.8.9",
     "scripts": [],
