@@ -7,7 +7,7 @@ Hooks.once('ready', function () {
     game.settings.register("accidental-item-deletion-preventer", "CheckDelete", {
         name: "Show item deletion dialogue?",
         hint: "When an item is deleted from the character sheet, show a confirmation dialogue before deleting. ",
-        scope: "world",
+        scope: "client",
         default: true,
         type: Boolean,
         config: true,
