@@ -42,5 +42,5 @@ jobs:
           prerelease: false
           token: ${{secrets.GITHUB_TOKEN}}
           artifacts: "./module.zip, ./module.json"
-          tag: v${{ steps.get-version.outputs.version }}
+          tag: v${{ steps.get_version.outputs.version }}
           replacesArtifacts: false
