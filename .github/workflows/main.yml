@@ -8,7 +8,7 @@ on:
   push:
     tags:
     - '*'
-    branches: [ master ]
+  #  branches: [ master ]
   # pull_request:
   #  branches: [ main ]
 
@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Zip Files
@@ -40,8 +40,7 @@ jobs:
           omitName: true
           draft: false
           prerelease: false
-          commit: "main"
           token: ${{secrets.GITHUB_TOKEN}}
           artifacts: "./module.zip, ./module.json"
-          tag: "v1.0.10"
+          tag: ${{ steps.get_version.outputs.version }}
           replacesArtifacts: false
