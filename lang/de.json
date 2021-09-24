@@ -1,0 +1,14 @@
+{
+    "PREVENTER": {
+        "settings": {
+            "name": "Löschdialog anzeigen?",
+            "hint": "Wenn ein Item aus dem Inventar eines Charakters gelöscht wird, wird vor dem Löschen erst ein Bestätigungsdialog angezeigt. "
+        },
+        "dialog-question": "Bist du dir sicher, dass du dieses Item permanent löschen willst: ",
+        "dialog-header": "Möchtest du wirklich dieses Item löschen?",
+        "of": "von",
+        "delete": "Löschen",
+        "cancel-button": "Abbrechen",
+        "confirm-button": "Löschen"
+    }
+}

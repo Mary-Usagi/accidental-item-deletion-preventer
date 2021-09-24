@@ -1,0 +1,14 @@
+{
+    "PREVENTER": {
+        "settings": {
+            "name": "Show item deletion dialogue?",
+            "hint": "When an item is deleted from the character sheet, show a confirmation dialogue before deleting. "
+        },
+        "dialog-question": "Are you sure you want to delete",
+        "dialog-header": "Do you really want to delete this item?",
+        "of": "of",
+        "delete": "Delete",
+        "cancel-button": "Cancel",
+        "confirm-button": "Delete"
+    }
+}

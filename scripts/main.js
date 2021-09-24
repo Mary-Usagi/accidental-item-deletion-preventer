@@ -6,8 +6,8 @@ Hooks.once('ready', function () {
     console.log('accidental-item-deletion-preventer | Initializing accidental-item-deletion-preventer');
 
     game.settings.register("accidental-item-deletion-preventer", "CheckDelete", {
-        name: "Show item deletion dialogue?",
-        hint: "When an item is deleted from the character sheet, show a confirmation dialogue before deleting. ",
+        name: game.i18n.localize('PREVENTER.settings.name'),
+        hint: game.i18n.localize('PREVENTER.settings.hint'),
         scope: "client",
         default: true,
         type: Boolean,
@@ -20,7 +20,7 @@ Hooks.once('ready', function () {
             let itemId = item.id;
 
             let quantity = item.data.data.quantity;
-            let text = `<p>Are you sure you want to delete <em>"${item.name}"</em> ?</p>`
+            let text = `<p>${game.i18n.localize('PREVENTER.dialog-question')} <em>"${item.name}"</em> ?</p>`
             let deleteAmount = 1;
             if (item.toDelete) {
                 return true;
@@ -30,19 +30,19 @@ Hooks.once('ready', function () {
                 text += `
 				    <form class="row form-inline">
 					    <div class="form-group">
-					        <strong>Delete:</strong> <input id="deleteAmountID" type="number" value="${quantity}" style="margin-left: 10px" /> <span style="margin-left: 5px; margin-right:230px"> of ${quantity}</span>
+					        <strong>${game.i18n.localize('PREVENTER.delete')}:</strong> <input id="deleteAmountID" type="number" value="${quantity}" style="margin-left: 10px" /> <span style="margin-left: 5px; margin-right:220px"> ${game.i18n.localize('PREVENTER.of')} ${quantity}</span>
 					    </div>
 				    </form>`
             }
 
             let d = new Dialog({
                 // localize this text
-                title: `Do you really want to delete this item?`,
+                title: game.i18n.localize('PREVENTER.dialog-header'),
                 content: text,
                 buttons: {
                     one: {
                         icon: '<i class="fas fa-check"></i>',
-                        label: "Delete",
+                        label: game.i18n.localize('PREVENTER.confirm-button'),
                         callback: async (html) => {
                             if (quantity > 1) {
                                 deleteAmount = parseInt(html.find("input#deleteAmountID").val());
@@ -60,7 +60,7 @@ Hooks.once('ready', function () {
                     },
                     two: {
                         icon: '<i class="fas fa-times"></i>',
-                        label: "Cancel",
+                        label: game.i18n.localize('PREVENTER.cancel-button'),
                         callback: () => { return false }
                     }
                 },
@@ -81,12 +81,12 @@ Hooks.once('ready', function () {
             }
             let d = new Dialog({
                 // localize this text
-                title: "Do you really want to delete this effect?",
-                content: `<p>Are you sure you want to delete <em>"${effect.data.label}"</em> ?</p>`,
+                title: game.i18n.localize('PREVENTER.dialog-header'),
+                content: `<p>${game.i18n.localize('PREVENTER.dialog-question')} <em>"${effect.data.label}"</em> ?</p>`,
                 buttons: {
                     one: {
                         icon: '<i class="fas fa-check"></i>',
-                        label: "Delete",
+                        label: game.i18n.localize('PREVENTER.confirm-button'),
                         callback: () => {
                             effect.toDelete = true;
                             actor.deleteEmbeddedDocuments("ActiveEffect", [effectId]);
@@ -94,7 +94,7 @@ Hooks.once('ready', function () {
                     },
                     two: {
                         icon: '<i class="fas fa-times"></i>',
-                        label: "Cancel",
+                        label: game.i18n.localize('PREVENTER.cancel-button'),
                         callback: () => { }
                     }
                 },
