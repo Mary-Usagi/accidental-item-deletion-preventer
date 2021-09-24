@@ -37,7 +37,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Zip Files
         working-directory: ./
-        run: zip -r ./module.zip ./main.js ./styles/* ./module.json ./LICENSE ./README.md
+        run: zip -r ./module.zip ./scripts/* ./languages/* ./templates/* ./styles/* ./module.json ./LICENSE ./README.md
 
 
 

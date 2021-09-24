@@ -1,6 +1,8 @@
 /* ------------------------------------ */
 /* Initialize module					*/
 /* ------------------------------------ */
+
+
 Hooks.once('ready', function () {
     console.log('accidental-item-deletion-preventer | Initializing accidental-item-deletion-preventer');
 
@@ -17,7 +19,7 @@ Hooks.once('ready', function () {
         if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete") && item.parent) {
             let actor = item.parent;
             let itemId = item.id;
-
+            
             let quantity = item.data.data.quantity;
             let text = `<p>Are you sure you want to delete <em>"${item.name}"</em> ?</p>`
             let deleteAmount = 1;
@@ -70,7 +72,7 @@ Hooks.once('ready', function () {
             return false;
         }
     });
-
+    
     Hooks.on("preDeleteActiveEffect", (effect, render, ...args) => {
         if (game.settings.get("accidental-item-deletion-preventer", "CheckDelete") && effect.parent) {
             let actor = effect.parent;

@@ -3,15 +3,32 @@
     "title": "Accidental Item Deletion Preventer",
     "description": "Adds a confirmation popup when trying to delete an item from the character sheet",
     "author": "MaryUsagi",
-    "version": "WILL BE AUTO REPLACED",
+    "authors": [],
+    "url": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/tree/master",
+    "flags": {},
+    "version": "WILL BE AUTOREPLACED",
     "minimumCoreVersion": "0.8.8",
     "compatibleCoreVersion": "0.8.9",
-    "scripts": [],
-    "esmodules": [
-        "main.js"
+    "scripts": [
+        "scripts/main.js"
     ],
+    "styles": [
+        "styles/todo-list.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        }
+    ],
+    "packs": [],
+    "system": [],
+    "dependencies": [],
     "socket": true,
-    "url": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/tree/master",
     "manifest": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/releases/latest/download/module.json",
-    "download": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/releases/latest/download/module.zip"
+    "download": "https://github.com/Mary-Usagi/accidental-item-deletion-preventer/releases/latest/download/module.zip",
+    "protected": false,
+    "coreTranslation": false,
+    "library": false
 }
